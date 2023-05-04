@@ -9,7 +9,7 @@
     <script>
         class Demo extends Phaser.Scene {
             create() {
-                this.meep = this.add.text(10,10,'🐁').setOrigin(0.5,0.5);
+                this.meep = this.add.text(10,10,'🐕').setOrigin(0.5,0.5);
                 this.input.setDefaultCursor('none');
                 this.input.on('pointerdown', (event) => {
                     this.tweens.add({
@@ -40,7 +40,7 @@
                     });
 
                     // spawn a dropping
-                    let dropping = this.add.circle(x+10,y+10,2).setFillStyle(0,1);
+                    let dropping = this.add.ellipse(x+10,y+10, 6, 4).setFillStyle(0,1);
                     dropping.setDepth(-1); // below the mouse
 
                     // shoot away quickly
@@ -75,6 +75,6 @@
 </head>
 <body>
     <div id="here"></div>
-    Drag the mouse around the screen.
+    Drag the dog around the screen.
 </body>
 </html>
